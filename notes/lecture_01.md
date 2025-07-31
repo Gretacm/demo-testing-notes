@@ -18,6 +18,13 @@ Undo: CTRL + Z
 Move row/s: ALT + arrow up/down
 Choose previous command within terminal: arrow up/down
 Save file: Cntr + S
+#Clear terminal window:
+#Win:
+cls
+#Mac: 
+clear
+
+
 
 ### Commands
 ```
@@ -48,6 +55,19 @@ GiT localiai -
 GItHub  - nuotoliniai repozitorijai(pushin'a);
 Remote VCS(version control sistems):
 GitHub, GitLab(Labiau corporate), Bitbucket, AWS dev ops, 
+```bash
+#Initialize git local repo:
+git init
+#list all changed/modified files:
+git status
+#prepare files for commit:
+git add . 
+#Create commit:
+git commit -m "Initial comit as first commit"
+
+#Commit list:
+git log
+```
 
 
 
