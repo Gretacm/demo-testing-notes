@@ -45,11 +45,22 @@ EDIT
 
 3. GitHub
 Link both repositories local and remote.
+```
+`Command` + `Shift` + `Period(.)` - to show some hidden files in Macintosh HD.
+```
 
 ```bash
 git remote add origin https://github.com/Gretacm/demo-testing-notes.git
 git branch -M main
 git push -u origin main
+
+```
+```bash
+#send update to GitHub
+git push
+
+#receive updates from GitHub
+git pull
 ```
 
 4. Git branching
