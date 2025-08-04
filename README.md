@@ -14,4 +14,4 @@
 
 
 
-Commment
+## [Lecture 03](./notes/lecture_03.md)
