@@ -19,7 +19,7 @@ Move row/s: ALT + arrow up/down
 Choose previous command within terminal: arrow up/down
 Save file: Cntr + S
 #Clear terminal window:
-#Win:
+#Windows:
 cls
 #Mac: 
 clear
@@ -27,8 +27,7 @@ clear
 
 
 ### Commands
-```
-bash
+```bash
 # Open VS code . -n 
 #Create new directory:
 mkdir
@@ -61,7 +60,7 @@ git init
 #list all changed/modified files:
 git status
 #prepare files for commit:
-git add . 
+git add . (taskas reiksia, kad versijuojam tam kataloge kuriam mes stovim)
 #Create commit:
 git commit -m "Initial comit as first commit"
 
