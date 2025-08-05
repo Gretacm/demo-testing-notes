@@ -53,8 +53,14 @@ Link both repositories local and remote.
 git remote add origin https://github.com/Gretacm/demo-testing-notes.git
 git branch -M main
 git push -u origin main
-
 ```
+Clone project:
+```bash
+git clone https://github.com/Gretacm/demo-20250507.git
+```
+
+
+
 ```bash
 #send update to GitHub
 git push
