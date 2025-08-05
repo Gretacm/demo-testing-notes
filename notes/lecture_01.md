@@ -70,4 +70,3 @@ git log
 
 
 
-## 4. VIM text editor

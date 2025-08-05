@@ -1,6 +1,6 @@
 1. VIM text editor
 2. GitHub
-3. Git branching
+
 
 
 ## 1. VIM text editor
@@ -69,4 +69,3 @@ git push
 git pull
 ```
 
-4. Git branching
