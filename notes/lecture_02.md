@@ -5,7 +5,7 @@
 
 ## 1. VIM text editor
 Insert mode press key: `ESC` or `i`
-1.Exit from `Instert` mode press key `esc`
+1.Exit from `Insert` mode press key `esc`
 2.open CLI mode: `SHIFT` + `;`
 3.Save data: just enter `w` and press `ENTER`
 
