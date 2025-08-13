@@ -449,4 +449,153 @@ function generateRandomPrice() {
 }
  
 */
+// STRING
+ 
+const string1 = "Labas";
+const string2 = 'Labas';
+const string3 = 'Labas, "Rytas" ';
+const string4 = "Labas, 'Rytas' ";
+const string5 = 'Labas, \'Rytas\' ';
+const string6 = "aLabas, \"Rytas\" ";
+ 
+console.log(string5, string6);
+ 
+const data = '2025-08-13';
+const string7 = `Dabar yra ${new Date}`;
+const string8 = `Dabar yra ${data}`;
+ 
+const savaitesDiena = 6
+ 
+const string9 = `Dabar yra ${savaitesDiena < 6 ? 'Darbo diena' : 'Savaitgalis'}`;
+ 
+console.log(string7);
+console.log(string8);
+console.log(string9);
+ 
+const kokiaDiena = savaitesDiena < 6 ? 'Darbo diena' : 'Savaitgalis';
+const string10 = 'Dabar yra ' + kokiaDiena
+ 
+console.log(string10);
+ 
+// METODAI
+ 
+let string = 'Man labai patinka mokytis Javascript'
+ 
+// 1. .length - apskaičiuoja ir grąžina string'o ilgį
+ 
+const stringoIlgis = string.length
+console.log(stringoIlgis); // 36
+ 
+// 2. String'o pakeitimo metodai:
+// a) .toUpperCase() - pakeičia visas didžiosiomis
+console.log(string.toUpperCase());
+console.log(string);
+ 
+// b) .toLowerCase() - pakeičia visas didžiosiomis
+console.log(string.toLowerCase());
+console.log(string);
+ 
+// 3. String'o dalių paėmimas
+// a) .slice(start, end) - grąžina string'o dalį nuo start iki end
+ 
+console.log(string.slice(1)); // an labai patinka mokytis Javascript
+let apkarpytasStringas = string.slice(1)
+console.log(apkarpytasStringas, string);
+ 
+console.log(string.slice(-1)); // t
+ 
+console.log(string.slice(0, 5)); // [0, 5) end parametras ne imtinai // Man l
+console.log(string.slice(-3, 36)); // ipt
+console.log(string.slice(-3, string.length)); // ipt
+ 
+let sugalvotasSkaicius = 5
+ 
+console.log(string.slice(sugalvotasSkaicius > 3 ? 15 : 0, string.length)); // ka mokytis Javascript
+ 
+function sum(a, b) {
+    return a + b;
+}
+ 
+console.log(string.slice(sum(7, 8), string.length)); // ka mokytis Javascript
+console.log(string.slice(string.indexOf('patinka'), string.length)); // patinka mokytis Javascript
+ 
+console.log(string.slice(-36, -33)); // Man
+ 
+const text = "Mozilla";
+console.log(text.substring(5, 2)); // "zil"
+console.log(text.slice(5, 2)); // ""
+ 
+// b) .substring(start, end) - gr1=ina string'o dal5 nuo start iki end (logika, ta pati kaip .slice(), tik skirtingai nei slice gali kirpti atgal)
+ 
+console.log(string.substring(1)); // an labai patinka mokytis Javascript
+console.log(string.substring(0, 5)); // [0, 5) end parametras ne imtinai // Man l
+ 
+// 4. Paieška string'e
+// a) .indexOf(x) - ieško pirmo ieškomo fragmento pradžios indekso
+console.log(string.indexOf('ti')); // 12
+ 
+// b) .lastIndexOf(x) - ieško paskutinio ieškomo fragmento pradžios indekso
+console.log(string.lastIndexOf('ti')); // 22
+ 
+// c) .include(x) - ieško argumento reikšmės ir jei randa grąžina true
+console.log(string.includes('labai')); // true
+console.log(string.includes('labas')); // false
+ 
+// d) .startsWith(x) - tikrina ar stringas prasideda argumento reikšme ir jei randa grąžina true
+console.log(string.startsWith('Man')); // true
+console.log(string.startsWith('labai')); // false
+ 
+// d) .endsWith(x) - tikrina ar stringas prasideda argumento reikšme ir jei randa grąžina true
+console.log(string.endsWith('script')); // true
+console.log(string.endsWith('labai')); // false
+ 
+// 5. String'o pakeitimas
+ 
+// a) .replace(ieškoma reikšmė, kuo keičiam) - suranda PIRMĄ ieškomą reikšmę ir ją pakeičia
+console.log(string.replace('ti', 'TI')); // Man labai paTInka mokytis Javascript
+console.log(string);
+ 
+// b) .replaceAll(ieškoma reikšmė, kuo keičiam) - suranda visas ieškomas reikšmes ir jas pakeičia
+console.log(string.replaceAll('ti', 'TI')); // Man labai paTInka mokyTIs Javascript
+ 
+// 6. String'o dalijimas ir sujungimas
+// a) .split(per ką dalinam, limitas (kiek masyve elementų sukurti)) - padalija string'ą per nurodytą reikšmę
+console.log(string.split(' ')); // ['Man', 'labai', 'patinka', 'mokytis', 'Javascript']
+console.log(string.split(' ', 2)); // ['Man', 'labai']
+console.log(string.split('')); // ['M', 'a', 'n', ' ', 'l', 'a', 'b', 'a', 'i', ' ', 'p', 'a', 't', 'i', 'n', 'k', 'a', ' ', 'm', 'o', 'k', 'y', 't', 'i', 's', ' ', 'J', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't']
+console.log(string.split()); // ['Man labai patinka mokytis Javascript']
+ 
+// b) string.concat(kitasStringas) - sujungia du string'us į vieną
+console.log('Hello'.concat(' world')); // Hello world
+console.log(string.concat(' world')); // Man labai patinka mokytis Javascript world
+ 
+// 7. String'o tarpų pradžioje ir gale panaikinimas
+// a) .trim() - nuima tarpus priekyje ir gale
+ 
+const stringasTrim = '  Labas   '
+console.log(stringasTrim.trim()); // 'Labas'
+ 
+// b) .trimStart() - nuima tarpus priekyje
+console.log(stringasTrim.trimStart()); // 'Labas   '
+ 
+// b) .trimEnd() - nuima tarpus priekyje
+console.log(stringasTrim.trimEnd()); // '  Labas'
+ 
+console.log(stringasTrim); // '  Labas   '
+ 
+// 8. Kartojimas
+// .repeat(keik kartų kartoti)
+ 
+console.log('miau '.repeat(3)); // 'miau miau miau '
+console.log(('miau '.repeat(3)).trimEnd()); // 'miau miau miau'
+ 
+// 9. Simbolių pridėjimas pradžioje ir gale
+ 
+const pvz = '5';
+ 
+// a) .padStart(kiek simbolių, kokie simboliai)
+console.log(pvz.padStart(5, '0')); // 00005
+ 
+// a) .padEnd(kiek simbolių, kokie simboliai)
+console.log(pvz.padEnd(5, '0')); // 50000
  

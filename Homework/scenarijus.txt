@@ -1,8 +1,0 @@
-005:
-Todo app:
-TS01 Create new todo
-TSO2 Edit todo
-TS03 Change todo status
-TS04 Filter
-TS05 Delete one todo
-TS06 Delete all completed todo

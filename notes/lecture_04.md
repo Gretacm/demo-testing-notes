@@ -1,18 +1,4 @@
-## 2. Learning and AI
-## 3.Requirements for QA specialist
-
-## 4. Testing types
-```
-Statinis(Static (Code review)) yra maziau aktualu
-Dinaminis testavimas:
-    Dynamic (QA involved)
-        Functional (Black, grey, white box)
-        Non function(Performance, Security testai:
-        )
-
-```
-UI -user interface
-UX - user 1. QA Roadmap
+1. QA Roadmap
 2. Learning and AI
 3. Requirements for QA specialist
 4. Testing types
@@ -83,7 +69,7 @@ Black box -> familiar with **UI** but we don't know how code works
     (E2E, API testing)
 
 Grey box -> familiar with **UI** and validation based on written code.
-    (E2E, API testing(Api yra sistemom susikalbeti, naudojant ))
+    (E2E, API testing)
 
 White box -> Understand code and write Unit Testing and Integration testing.
 

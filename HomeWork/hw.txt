@@ -1,0 +1,65 @@
+user interface:
+01.user interface "feels weird":
+02. arrow down doesn't really open a list like it should, but it refreshes the list (kind of);
+03.In small script under the table it there is text "Double click to edit a toodo" but it doesn't work:
+on html we can see that its only <p></p> and have no script. 
+04.On a small screen Text "To do list" overlaps.
+05. It says number of how many items left on a list, but it's inaccurate, its always one number less. and when you complete all the items on a list its says "-1 item left" on a list.
+06. If you double click on a downward arrow it crosses all the items on a list at once. Instead of closing the list.
+
+
+
+```
+
+UI -User interface
+UX - user experience
+comments:
+Functionalumas kurio trukta nera defektas.
+gramtines klaidas irgi taisom
+ blogai veikiantis toggle funkcionalumas.
+user experience
+severity level
+```
+
+Console:
+Html:
+
+
+HW2. identifikuoti scenarijus: 
+
+01. add list
+02.all
+03.active
+04.completed
+05.Clear
+06.edit? 
+07.arrow?
+08.delete from the list
+
+TS01 Create new todo
+TS02 Edit todo
+TS03 Change todo status
+TS04 Change all todo status
+TS05 Count active todo
+TS06 Filter
+TS07 Delete one todo
+TS08 Delete all completed todo
+TS09 Cashing data locally
+TS10 UI/UX
+
+HW3.
+
+TC_1.1. Positive create new todo
+
+    Pre-requisite: open app https://todolist.james.am/#/
+    1. Input task name: go to grocery store
+    2. Press 'Enter' key to save
+    3. Observe result
+    
+    Expected result: new task appear in the list below
+    Actual result:
+    Status: Pass/Fail
+
+    TC_1.2. 
+
+    tikrinu

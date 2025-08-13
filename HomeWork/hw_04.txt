@@ -1,0 +1,14 @@
+There is ToDo management application in https://todolist.james.am/ 
+Identify scenarios of this web app.
+
+
+identifikuoti scenarijus: 
+
+01. add list
+02.all
+03.active
+04.completed
+05.Clear
+06.edit? 
+07.arrow?
+08.delete from the list

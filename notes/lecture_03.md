@@ -2,31 +2,28 @@
 2. Git branching
 3. GitHub project settings
 
-##1.Checkout commits
+## 1. Checkout commits
 ```bash
-git checkout commit_unique_number
-```
+git checkout commit_unique_number 
 
-```bash
 # 1 Step
-#check if require commit some changes
+# check if require commit some changes
 
-# 2 Step in order to check out some old commit
-git checkout 53ad65f57e57f73d1aa
+# 2 Step in order to checkout some old commit
+git checkout e5a0eab2d312fe5b
 
 # 3 Step to back for commit continuation
 git checkout branch_name
 git checkout main
 
-#some additional helpful commands:
-#list of project branches
+# some additional helpful commands:
+# list of project branches
 git branch
 
-#get commit unique number 
-git log #just coppy first ~ten 
+# get commit unique number
+git log # just copy first 10 numbers of commit id
 
 ```
-
 
 ## 2. Git branching
 ```bash

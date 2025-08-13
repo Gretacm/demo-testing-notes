@@ -1,0 +1,100 @@
+There is ToDo management application in https://todolist.james.am/ 
+Identify scenarios of this web app - DONE
+
+Create test cases for below listed TS and execute written tests within new file - DONE
+
+Choose some xls of doc TC form and fill in with previously your written TC.
+
+HW2. identifikuoti scenarijus: 
+
+01. add list
+02.all
+03.active
+04.completed
+05.Clear
+06.edit? 
+07.arrow?
+08.delete from the list
+
+TS01 Create new todo
+TS02 Edit todo
+TS03 Change todo status
+TS04 Change all todo status
+TS05 Count active todo
+TS06 Filter
+TS07 Delete one todo
+TS08 Delete all completed todo
+TS09 Cashing data locally
+TS10 UI/UX
+
+HW3.
+
+### TS01 Create new todo
+
+
+        TC_1.1. Positive create new todo
+
+            Pre-requisite: open app https://todolist.james.am/#/
+            1. Input task name: go to grocery store
+            2. Press 'Enter' key to save
+            3. Observe result
+            
+            Expected result: new task appear in the list below
+            Actual result:
+            Status: Pass/Fail
+
+        TC_1.2. Negative keep todo task name empty
+            Pre-requisite: open app https://todolist.james.am/#/
+            1. Input task name: leave empty
+            2. Press 'Enter' key to save
+            3. Observe result
+            
+            Expected result: do not allow to create new todo task
+            Actual result:
+            Status: Pass/Fail
+
+        TC_1.3. Negative create todo task when name contain spaces
+            Pre-requisite: open app https://todolist.james.am/#/
+            1. Input task name: leave empty
+            2. Press 'Enter' key to save
+            3. Observe result
+            
+            Expected result: do not allow to create new todo task
+            Actual result:
+            Status: Pass/Fail
+
+
+
+### TS02 Edit todo
+
+        TC_2.1. Positive create new todo
+
+         Pre-requisite: open app https://todolist.james.am/#/
+            1. Create new item on a list
+            2. Press 'Enter' key to save
+            
+            1.  Double click on created item.
+            2.Edit task name TO "New name"
+            3.Press enter to save
+            4.Observe result
+            
+            Expected result: the task will change its name to "New name"
+            Actual result:
+            Status: Pass/Fail
+
+        TC_2.2. Negative keep to do task name empty when editing
+
+         Pre-requisite: open app https://todolist.james.am/#/
+          Pre-requisite:
+            1. Create new item on a list
+            2. Press 'Enter' key to save
+            
+            1.  Double click on created item.
+            2.Edit task name TO "New name"
+            3.Press enter to save
+            4.Observe result
+            
+            Expected result: the task will change its name to "New name"
+            Actual result:
+            Status: Pass/Fail
+
