@@ -67,7 +67,7 @@ HW3.
 
 ### TS02 Edit todo
 
-        TC_2.1. Positive create new todo
+        TC_2.1. Edit todo
 
          Pre-requisite: open app https://todolist.james.am/#/
             1. Create new item on a list
@@ -90,11 +90,134 @@ HW3.
             2. Press 'Enter' key to save
             
             1.  Double click on created item.
-            2.Edit task name TO "New name"
+            2.Edit task name emty.
             3.Press enter to save
             4.Observe result
             
-            Expected result: the task will change its name to "New name"
+            Expected result: The task will stay with no name/Or error message
+            Actual result:
+            Status: Fail
+
+### TS03 Change todo status
+        TC_3.1 Positive: Change todo status from active to completed
+        Pre-requisite: 
+            1.Open app https://todolist.james.am/#/
+            2. Add new task to the list.
+            3.Press enter to add task to todo list.
+
+            1.Tick a box on an one todo item.
+            2.Click on "Completed" section to verify change.
+            3.Observe result.
+
+            Expected result: Marked to do item changes from status "active" to "completed".
             Actual result:
             Status: Pass/Fail
+
+       TC_3.2 Positive: Change todo status from Completed to active
+        Pre-requisite: 
+            1.Open app https://todolist.james.am/#/
+            2. Add new task to the list.
+            3.Press enter to add task to todo list.
+            4.Observe result.
+
+
+            1.Tick a box on an one todo item.
+
+            Expected result: Marked item  from "Completed section" changes status to active.
+            Actual result:
+            Status: Pass
+
+### TS04 Change all todo status
+    TC_4.1 Positive: Change all todo list item status from active to completed.
+    Pre-requisite: 
+            1.Open app https://todolist.james.am/#/
+            2. Add new task to the list.
+            3.Press enter to add task to todo list.
+            4.Do step 2 and 3 multiple times.
+
+            1.Click "Arrow down" simbol.
+            2.Observe result.
+
+            Expected result: All active items on to do list will become "Completed".
+            Actual result: As Expected
+            Status: Pass
+
+
+NOT COMPLETED ### TS05 Count active todo
+    TC_5.1 Positive: .
+    Pre-requisite: 
+            1.Open app https://todolist.james.am/#/
+            2. Add new task to the list.
+            3.
+            4.
+
+            1.
+            2.Observe result.
+
+            Expected result: All active items on to do list will become "Completed".
+            Actual result: Not as Expected
+            Status: Fail
+
+ NOT COMPLETED ###  TS06 Filter Function
+    TC_6.1  .
+    Pre-requisite: 
+            1.Open app https://todolist.james.am/#/
+            2. Add new task to the list.
+            3.
+            4.
+
+            1.
+            2.Observe result.
+
+            Expected result: All active items on to do list will become "Completed".
+            Actual result: Not as Expected
+            Status: Fail
+
+### TS07 Delete one todo
+    TC_7.1 Positive: Delete one todo
+      Pre-requisite: 
+            1.Open app https://todolist.james.am/#/
+            2. Add new task to the list.
+
+            1.Select active item from the list
+            2.Click on a red cross on a left hnd side.
+            3.Observe result.
+
+            Expected result: Selected ittem on a list gets deleted.
+            Actual result: As Expected
+            Status: Pass
+
+
+### TS08 Delete all completed todo
+
+    TC_8.1 Positive: Delete one todo
+      Pre-requisite: 
+            1.Open app https://todolist.james.am/#/
+            2. Add new task to the list.
+
+            1.Click the arrow down simbol.
+            2.Click on a "Clear" simbol.
+            3.Observe result.
+
+            Expected result: All items gets deleted.
+            Actual result: As Expected
+            Status: Pass
+
+NOT COMPLETED### TS09 Cashing data locally
+
+    TC_9.1 
+     Pre-requisite: 
+
+            Expected result: 
+            Actual result: 
+            Status:
+
+ NOT COMPLETED### TS10 UI/UX
+
+    TC_10.1 
+     Pre-requisite: 
+
+            Expected result: 
+            Actual result: 
+            Status:
 
