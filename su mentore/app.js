@@ -176,35 +176,277 @@ console.log(skaicius2);
 //grąžina true, jei tai galiojantys skaitmenys (t.y. ne NaN), kitu atveju false.
 //isValidNumber("123.45") → trueisValidNumber("abc") → false
 
+function isValidNumber(a){
+  return !isNaN(a);
+};
 
-/*function isValidNumber (a)
-if {
-    (Number.isNan(a)) 
-}else {
-    console.log(`${a} is Valid number`)
-}*/
+let numeris = 6;
+let numeris1 = "sss5ddd";
+console.log(isValidNumber(numeris));
 
-
-
+console.log(isValidNumber("hshsh1"));
 
 
 //2. Sukurk funkciją, kuri grąžina suapvalintą (iki sveikojo) atsitiktinį skaičių nuo 100 iki 200 (imtinai)
 
-function funkcijaSveikas (a){
+/*function funkcijaSveikas (a){
     a = rand(100, 200);
     Math.round(a)
 }
 
+console.log(funkcijaSveikas(7.3433));
+*/
 //3. Turint skaičių kaip tekstą '1_000_000.99eur', ištrauk tik sveikąją dalį kaip number
 
-let trecias = '1_000_000.99eur';
+/*let trecias = '1_000_000.99eur';
 console.log(Number.parseFloat(trecias));
 console.log(Number.parseInt() (trecias));
 
 Number.parseInt();
 Number.parseFloat();
+*/
 
 //4. Koks bus rezultatas ir kodėl?
 //console.log(Math.round('4.5abc')); atsakymas: suapvalina iki artimiausio sveikojo skaiciaus 5
 
+ 
+// Number.isNan(x) - patikrina ar skaičius yra NaN
+
+
+
+// TRINTI let numeris = 6;
+// let numeris1 = "sss5ddd"; 
+// console.log(Number.isNaN(numeris1)); // false
+// console.log(!Number.isNaN(numeris1)); // true
+//5. Sukurk funkciją toEuroFormat(number), kuri: gauna skaičių, grąžina jį kaip tekstą lietuvišku valiutos formatu (pvz., 1 234,56 €)
+
+function toEuroFormat(number){
+    let numberLocale = 6.7688;
+console.log(numberLocale.toLocaleString('lt-LT'));
+}
+
+console.log('')
+
+
+//nauji nd:
+
+// 6. Parašyk funkciją clamp(x, min, max), kuri:
+/*gauna skaičių x ir du rėžius: min ir max,
+grąžina x, jei jis yra tarp min ir max (imtinai),
+jei x mažesnis už min, grąžina min,
+jei x didesnis už max, grąžina max.
+
+
+
+
+
+7. Sukurk funkciją, kuri:
+gauna du string tipo skaičius (pvz., '12.5kg', '4.3m'),
+iš jų ištraukia skaičius (float) ir grąžina jų sandaugą, suapvalintą iki dviejų skaičių - po kablelio.
+8. Sukurk funkciją safeDivide(a, b), kuri:
+dalina a iš b,
+jei rezultatas yra Infinity arba NaN, grąžina null, kitaip – rezultatą su dviem skaičiais po kablelio.
+9. Gauti skaičių 1234567.89123:
+parodyk jį su toLocaleString('lt-LT'),
+tada su toPrecision(4).
+10. Parašyk funkciją, kuri tikrina, ar du number tipo argumentai turi tokią pat sveikąją dalį (pvz., 5.99 ir 5.01 → true).
+11. Sukurk funkciją, kuri gauna bet kokį string’ą ir grąžina:
+{ original: , isNaN: , parsed: }
+12. Sugeneruok atsitiktinį sveiką skaičių nuo -50 iki +50, bet jei jis yra neigiamas – paversk jį į teigiamą.
+13. Parašyk funkciją isSafeFloat(x), kuri:
+patikrina, ar skaičius x yra saugus (Number.isSafeInteger) ir turi ne daugiau nei 2 skaičius po kablelio.
+14. Sukurk funkciją compareDecimals(a, b), kuri:
+grąžina true, jei a ir b yra skirtingi kaip number,
+bet toFixed(2) reikšmės yra vienodos kaip string’ai.
+15. Parašyk funkciją, kuri:
+gauna kelis skaičius (naudojant ...args),
+grąžina objektą su savybėmis: max, min, average (suapvalintas iki 2 skaičių po kablelio).
+16. Parašyk funkciją, kuri:
+gauna stringą '3.14159',
+grąžina { float: 3.14, int: 3 }.
+17. Sukurk funkciją, kuri:
+grąžina kvadratinę šaknį tik tuomet, jei skaičius yra sveikasis ir teigiamas, priešingu atveju – null.
+18. Parašyk funkciją randomEven(min, max), kuri:
+grąžina atsitiktinį lyginį skaičių tarp min ir max.
+19. Sukurk funkciją roundToNearestTen(x), kuri:
+suapvalina skaičių iki artimiausio dešimtuko (pvz., 23 → 20, 27 → 30).
+20. Parašyk funkciją generateRandomPrice(), kuri:
+grąžina atsitiktinę prekių kainą nuo 0.99 iki 99.99,
+reikšmė turi būti number, su dviem skaičiais po kablelio.
+
+// 6. Parašyk funkciją clamp(x, min, max), kuri:
+// gauna skaičių `x` ir du rėžius: `min` ir`max`,
+// grąžina`x`, jei jis yra tarp `min` ir`max`(imtinai),
+// jei`x` mažesnis už`min`, grąžina`min`,
+// jei`x` didesnis už`max`, grąžina`max`.
+ 
+function clamp(x, min, max) {
+    return Math.max(min, Math.min(max, x));
+}
+ 
+console.log(clamp(15, 10, 20));
+ 
+// 7. Sukurk funkciją, kuri:
+// - gauna du string tipo skaičius(pvz., '12.5kg', '4.3m'),
+// - iš jų ištraukia skaičius(float) ir grąžina jų sandaugą, suapvalintą iki dviejų skaičių - po kablelio.
+ 
+function multiplyStrings(a, b) {
+    const num1 = parseFloat(a);
+    const num2 = parseFloat(b);
+    return (num1 * num2).toFixed(2);
+}
+ 
+// 8. Sukurk funkciją safeDivide(a, b), kuri:
+// - dalina a iš b,
+// - jei rezultatas yra Infinity arba NaN, grąžina null, kitaip – rezultatą su dviem skaičiais po kablelio.
+ 
+function safeDivide(a, b) {
+    const result = a / b;
+    if (!Number.isFinite(result)) return null;
+    return +result.toFixed(2);
+}
+ 
+// 9. Gauti skaičių 1234567.89123:
+// parodyk jį su toLocaleString('lt-LT'),
+// tada su toPrecision(4).
+ 
+function showFormatted(number) {
+    return {
+        locale: number.toLocaleString('lt-LT'),
+        precision: number.toPrecision(4)
+    };
+}
+ 
+// 10. Parašyk funkciją, kuri tikrina, ar du number tipo argumentai turi tokią pat sveikąją dalį (pvz., 5.99 ir 5.01 → true).
+ 
+function sameIntegerPart(a, b) {
+    return Math.trunc(a) === Math.trunc(b);
+}
+ 
+console.log(sameIntegerPart(5.01, 5.99));
+ 
+// 11. Sukurk funkciją, kuri gauna bet kokį string’ą ir grąžina:
+// { original: <string>, isNaN: <boolean>, parsed: <number> }
+ 
+function analyzeString(input) {
+    const parsed = Number(input);
+    return {
+        original: input,
+        isNaN: Number.isNaN(parsed),
+        parsed: parsed
+    };
+}
+ 
+// 12. Sugeneruok atsitiktinį sveiką skaičių tarp nurodyto `min` ir `max`, bet jei jis yra neigiamas – paversk jį į teigiamą.
+ 
+function randomPositiveInRange(min, max) {
+    const random = Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.abs(random);
+}
+ 
+console.log(randomPositiveInRange(-50, 50));
+console.log(randomPositiveInRange(-10, -1));
+console.log(randomPositiveInRange(5, 15));
+ 
+// 13. Parašyk funkciją isSafeFloat(x), kuri:
+// patikrina, ar skaičius x yra saugus(Number.isSafeInteger) ir turi ne daugiau nei 2 skaičius po kablelio.
+ 
+function isSafeFloat(x) {
+ 
+    return Number.isFinite(x) && x.toString().split('.')[1]?.length <= 2;
+}
+ 
+console.log(isSafeFloat(123.45));
+console.log(isSafeFloat(123.456));
+console.log(isSafeFloat(9007199254740992.12));
+ 
+function isSafeFloat2(x) {
+    // 1. Paverčiame skaičių į tekstą, kad galėtume patikrinti skaičius po kablelio
+    const textVersion = x.toString();
+ 
+    // 2. Padalijame tekstą į dvi dalis: prieš kablelį ir po kablelio
+    // Jei nėra kablelio, antra dalis bus undefined
+    const parts = textVersion.split('.');
+ 
+    // 3. Paimame tik sveikąją dalį (prieš kablelį) ir paverčiame atgal į skaičių
+    const integerPart = Number(parts[0]);
+ 
+    // 4. Patikriname, ar sveikoji dalis yra "saugus sveikasis skaičius"
+    const isSafeIntegerPart = Number.isSafeInteger(integerPart);
+ 
+    // 5. Išsiaiškiname, kiek skaitmenų yra po kablelio
+    const decimalPartLength = parts[1] ? parts[1].length : 0;
+ 
+    // 6. Patikriname, ar skaitmenų po kablelio yra ne daugiau nei 2
+    const hasMaxTwoDecimals = decimalPartLength <= 2;
+ 
+    // 7. Funkcija grąžina true tik tada, kai abi sąlygos yra teisingos
+    return isSafeIntegerPart && hasMaxTwoDecimals;
+}
+ 
+console.log(isSafeFloat(123.45));
+console.log(isSafeFloat(123.456));
+console.log(isSafeFloat(9007199254740992.12));
+ 
+// 14. Sukurk funkciją compareDecimals(a, b), kuri:
+// grąžina true, jei a ir b yra skirtingi kaip number,
+// bet toFixed(2) reikšmės yra vienodos kaip string’ai.
+function compareDecimals(a, b) {
+    return a !== b && a.toFixed(2) === b.toFixed(2);
+}
+ 
+// 15. Parašyk funkciją, kuri:
+// gauna kelis skaičius(naudojant ...args),
+// grąžina objektą su savybėmis: max, min, average(suapvalintas iki 2 skaičių po kablelio).
+function analyzeNumbers(...args) {
+    const sum = args.reduce((a, b) => a + b, 0);
+    return {
+        max: Math.max(...args),
+        min: Math.min(...args),
+        average: +(sum / args.length).toFixed(2)
+    };
+}
+ 
+// 16. Parašyk funkciją, kuri:
+// gauna stringą '3.14159',
+// grąžina { float: 3.14, int: 3 }.
+ 
+function parseFloatAndInt(str) {
+    const float = +parseFloat(str).toFixed(2);
+    const int = parseInt(str);
+    return { float, int };
+}
+ 
+// 17. Sukurk funkciją, kuri:
+// grąžina kvadratinę šaknį tik tuomet, jei skaičius yra sveikasis ir teigiamas, priešingu atveju – null.
+function safeSqrt(n) {
+    if (n >= 0 && Number.isInteger(n)) return Math.sqrt(n);
+    return null;
+}
+ 
+// 18. Parašyk funkciją randomEven(min, max), kuri:
+// grąžina atsitiktinį lyginį skaičių tarp min ir max.
+function randomEven(min, max) {
+    const evenMin = Math.ceil(min / 2) * 2;
+    const evenMax = Math.floor(max / 2) * 2;
+    const count = ((evenMax - evenMin) / 2) + 1;
+    const randomIndex = Math.floor(Math.random() * count);
+    return evenMin + randomIndex * 2;
+}
+ 
+// 19. Sukurk funkciją roundToNearestTen(x), kuri:
+// suapvalina skaičių iki artimiausio dešimtuko(pvz., 23 → 20, 27 → 30).
+function roundToNearestTen(x) {
+    return Math.round(x / 10) * 10;
+}
+ 
+// 20. Parašyk funkciją generateRandomPrice(), kuri:
+// grąžina atsitiktinę prekių kainą nuo 0.99 iki 99.99,
+// reikšmė turi būti number, su dviem skaičiais po kablelio.
+ 
+function generateRandomPrice() {
+    return +((Math.random() * (99.99 - 0.99)) + 0.99).toFixed(2);
+}
+ 
+*/
  

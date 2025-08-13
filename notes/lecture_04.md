@@ -83,7 +83,7 @@ Black box -> familiar with **UI** but we don't know how code works
     (E2E, API testing)
 
 Grey box -> familiar with **UI** and validation based on written code.
-    (E2E, API testing)
+    (E2E, API testing(Api yra sistemom susikalbeti, naudojant ))
 
 White box -> Understand code and write Unit Testing and Integration testing.
 
