@@ -1,11 +1,9 @@
-exploratory testing and:
-
-find the functionalities of the system.
-
-Identify the scenarios of the application:
 
 
 Test Scenarious:
+
+TS01 Menu
+TS Discounted coffee
 
 
 TS01 Menu
@@ -13,68 +11,92 @@ TS01 Menu
         1. Open app https://coffee-cart.app/
         2. Add a item to the cart
         3. Observe the result;
-    Expected result: After clicking on the selected menu item, item should be added to the cart.
-    Actual result: Item appears in the cart.
-    Status: Pass
-
-
-    //
-    Add item to the cart? No
-    One finger click on an item:
-    Two finger click on an item:
-    //
+        Expected result: After clicking on the selected menu item, item should be added to the cart.
+        Actual result: Item appears in the cart.
+        Status: Pass
 
     TC_01.2 Add multiple items to the cart
         1. Open app https://coffee-cart.app/
         2. Add 50 items to the cart
         3.Observe the result.
-    Expected result: 50 items should be added to the cart.
-    Actual result: Items appears in the cart.
-    Status: Pass
+        Expected result: 50 items should be added to the cart.
+        Actual result: Items appears in the cart.
+        Status: Pass
 
-    TC01.3 Coffee cup name language
+    TC_01.3 Coffee cup name language
         1.Double click on a drink name
-    Expected result: Should have some drinks ingreadiant, calories or ect. Not change language to Chinese(unless this is design idea)
-    Actual result: Changes language from english to Chinese
-    Status: Fail
+        Expected result: Should have some drinks ingreadiant, calories or ect. Not change language to Chinese(unless this is design idea)
+        Actual result: Changes language from english to Chinese
+        Status: Fail
+
+    TC_01.4 Change the drink name language
+
+    TC_01.5 Go to "Cart"
+
+    TC_01.5 Go to "github"
+
+    TC_01.6 Total hover button
 
 
+TS02 Cart
+    TC_03.1  Positive: Add valid email address when on "Payment details":
+            Pre:
+            1.Open the app https://coffee-cart.app/.
+            2.Add random item to the cart.
 
-TS02 It's your lucky day
-TS03 Cart
-    TC_03.1 Adding discounted mocha manually.
+            Steps: 
+            1.Hover over Total button.
+            2.Click on Total button.
+            3.Add a valid email adress with @simbol.
+            Expected result: Confirmation message about successfull purchase ir further steps apears.
+            Actual result: Green table with a confrmation message apears on a bottom of the screen.
+            Status: Pass
 
-        1.Open app https://coffee-cart.app/
-        2.Add two drink to the cart to get a dicounted mocha offer.
-        3.Agree to dicounted mocha.
-        4.Add 15 dicounted mocha's instead of full priced mocha's. 
-        5.Observe the result.
-    Expected result: App should not give you an option to add unlimited amount of discounted drink, error message should apear. Or not give plus button on it. 
-    Actual result: 15 discounted mochas apears in a cart.
-    Status: Fail
+    TC_03.2 Add one coffee more to the list(+)
+
+    TC_03.3 Remove one coffee from the list(-)
+
+    TC_03.4 Remove whole list of coffees (X)
+
+    TC_03.5 Check out with empty cart.
 
 
-
-TS04 GitHub
-TS05 Total
-TS06 Reduce the items
-TS07 Increase the items
-TS08 Payment   
-    TC_08.1 Positive: Add valid email address:
-    Pre:
+                Pre:
         1.Open the app https://coffee-cart.app/.
-        2.Add random item to the cart.
+        2.Hover over Total button.
+        3.Click on Total button.
 
-        Steps: 
-        1.Hover over Total button.
-        2.Click on Total button.
-        3.Add a valid email adress with @simbol.
-    Expected result: Confirmation message about successfull purchase ir further steps apears.
-    Actual result: Green table with a confrmation message apears on a bottom of the screen.
-    Status: Pass
+        1.Add valid details for the Input.
+        2.Press submit.
+        Expected result: Error message "Empty cart" Or Simmilar message apears.
+        Actual result: Succesful purchase message appears.
+        Status: Fail
+    TC_03.6 Add email without @ simbol and only letters.
 
-TC_08.2 Negative: Add Name only with a numbers:
-     Pre:
+        1. Input Name: ffffffff
+           Input Email: ffffffff
+        Expected result: Error message "Please add valid email" Or Simmilar message apears.
+        Actual result: Please add email address with @ simbol apears.
+        Status: Pass
+    TC_03.7 Add email without @ simbol and only digits.
+
+        Expected result: Error message "Please add valid email" Or Simmilar message apears.
+        Actual result: Please add email address with @ simbol apears.
+        Status: Pass
+    TC_03.8 Negative: Invalid Name.Add email only with @ simbol and digits.
+        Expected result: Error message "Please add valid email" Or Simmilar message apears.
+        Actual result: Please enter a part followed by '@'. 
+        Status: Fail
+    TC_03.9 Negative: Invalid Name. Add email only with @ simbol and letters.
+        Expected result: Error message "Please add valid email" Or Simmilar message apears.
+        Actual result: Please enter a part followed by '@'. 
+        Status: Fail
+    TC_03.10 Negative: Invalid Name.Add email only with  one @ simbol and letters before and after.
+        Expected result: Error message "Please add valid email" Or Simmilar message apears.
+        Actual result: Succesful purchase message appears.
+        Status: Fail
+    TC_03.11 Negative: Invalid Name. add name only with a numbers:
+        Pre:
         1.Open the app https://coffee-cart.app/.
         2.Add random item to the cart.
         3.Hover over Total button.
@@ -87,47 +109,13 @@ TC_08.2 Negative: Add Name only with a numbers:
         Expected result: Error message "Invalid Name" Or Simmilar scenario apears.
         Actual result: Succesful purchase message appears.
         Status: Fail
-        
-    TC_08.3 Check out with empty cart.
-        Pre:
-        1.Open the app https://coffee-cart.app/.
-        2.Hover over Total button.
-        3.Click on Total button.
 
-        1.Add valid details for the Input.
-        2.Press submit.
-        Expected result: Error message "Empty cart" Or Simmilar message apears.
-        Actual result: Succesful purchase message appears.
-        Status: Fail
-    TC_08.4 Add email without @ simbol and only letters.
-        1. Input Name: ffffffff
-           Input Email: ffffffff
-    Expected result: Error message "Please add valid email" Or Simmilar message apears.
-        Actual result: Please add email address with @ simbol apears.
-        Status: Pass
-    TC_08.5 Add email without @ simbol and only digits.
-    Expected result: Error message "Please add valid email" Or Simmilar message apears.
-        Actual result: Please add email address with @ simbol apears.
-        Status: Pass
-    TC_08.6 Add email only with @ simbol and digits.
-    Expected result: Error message "Please add valid email" Or Simmilar message apears.
-        Actual result: Please enter a part followed by '@'. 
-        Status: Pass
-    TC_08.7 Add email only with @ simbol and letters.
-    Expected result: Error message "Please add valid email" Or Simmilar message apears.
-        Actual result: Please enter a part followed by '@'. 
-        Status: Pass
-    TC_08.8 Add email only with  one @ simbol and letters before and after.
-    Expected result: Error message "Please add valid email" Or Simmilar message apears.
-        Actual result: Succesful purchase message appears.
-        Status: Fail
-
-
-
-TS09 It's your lucky day:
-    Every third coffee gives you "Extra cup of mocha"
-    TC_09.1 "Yes, of cource!"
-    TC_09.2 "Nah, I'll skip."
+TS03 About (github)
+        TC_04.1
+TS05 Total
+        TC Reduce the items
+        TC Increase the items
+ 
 TS10  Mobile view:
     TC_10.1 Check the menu display on a small screen: 
         1.Open the app https://coffee-cart.app/.
@@ -136,13 +124,41 @@ TS10  Mobile view:
         3. Choose the IphoneSE dimensions.
         4.Observe that elements fits accordingly on a small dispaly.
 
-        
-
     Expected result: Viev fits accordingly on a small screen.
     Actual result: View does fit and adapt well on a smaller screen.
     Status: Pass
 
+TS UI/UX:
+    reklaminis baneris
+    double click
+    animacija
+    kalbos pakeitimas
+    Hoveris dingsta antra karta uzhoverinus
+    prideti ta kur nesimato pop up, kad neprikabintas prie ekrano, o prie puslapio virsaus? 
+
+    Discounted coffee
+        Description: Every third coffee gives you "Extra cup of mocha"
+        TC_02.1 Accept: "Yes, of cource!"
+        TC_02.2 Decline: "Nah, I'll skip."
+      
+TS storage
+    ? refreshinus puslpai duomenys neisaugomi? 
 
 TS11/Suggestions:
-1. Adding multiple drinks at once (Not available)
- 2.After certain time items desapears from the cart. 
+    1. Adding multiple drinks at once (Not available)
+    2.After certain time items desapears from the cart. 
+
+    Navigational menu padaryti kaip atskira scenariu ir isidet, meniu, cart, ir github i viena. 
+
+NEZINAU KUR PRIDET GERIAU.
+
+ TC_ Adding discounted mocha manually.
+
+        1.Open app https://coffee-cart.app/
+        2.Add two drink to the cart to get a dicounted mocha offer.
+        3.Agree to dicounted mocha.
+        4.Add 15 dicounted mocha's instead of full priced mocha's. 
+        5.Observe the result.
+        Expected result: App should not give you an option to add unlimited amount of discounted drink, error message should apear. Or not give plus button on it. 
+        Actual result: 15 discounted mochas apears in a cart.
+        Status: Fail
