@@ -38,6 +38,16 @@ TS01 Menu
     TC_01.6 Total hover button
 
     TC_01.7 Total hover button increase item number by one
+      1.Open the app https://coffee-cart.app/.
+        2.Add random item to the cart.
+        Steps:
+        1.Hover over the "Totals" button.
+        2.When extra table with cart list with plus (+) simbol apears increase the coffee number once by clicking plus simbol.
+        3.Observe the result.
+
+        Expected result: Total of chosen drink increases by the amount of which we clicked on plus simbol.
+        Actual result: as expected.
+        Status: Pass
 
     TC_01.8 Total hover button reduce item number by one
 
@@ -65,47 +75,107 @@ TS02 Cart (Check the functionality of the "Cart" section)
             Pre:
             1.Open the app https://coffee-cart.app/.
             2.Add random item to the cart.
+          
 
             Steps: 
             1.Hover over Total button.
             2.Click on Total button.
             3.Add a valid email adress with @simbol.
+            4. Observe the result.
             Expected result: Confirmation message about successfull purchase ir further steps apears.
             Actual result: Green table with a confrmation message apears on a bottom of the screen.
             Status: Pass
 
     TC_02.2 Add one coffee more to the list(+)
+        Pre-requisites:
+        1.Open the app https://coffee-cart.app/.
+        2.Add random item to the cart.
+        3.Go to the cart.
+        Steps:
+
+        
+        1.Increase the coffee number once by clicking plus simbol.
+        2.Observe the result.
+
+        Expected result: Total of chosen drink increases by the amount of which we clicked on plus simbol.
+        Actual result: as expected.
+        Status: Pass
 
     TC_02.3 Remove one coffee from the list(-)
+        Pre-requisites:
+        1.Open the app https://coffee-cart.app/.
+        2.Add random item to the cart.
+        3.Go to the cart.
+        Steps:
+        1.Reduce the amount of items on a total list by clicking on minus simbol (-).
+        2.Observe the result.
+
+        Expected result: Total of chosen drink reduced by the one after clicking minus simbol.
+        Actual result: as expected.
+        Status: Pass
 
     TC_02.4 Remove whole list of coffees (X)
 
- 
-    TC_02.6 Add email without @ simbol and only letters.
+       Pre-requisites:
+        1.Open the app https://coffee-cart.app/.
+        2.Add random item to the cart.
+        3.Go to the cart.
+        Steps:
+        1.Click an (X) simbol on a right side of the item list.
+        2.Observe the resut.
 
-        1. Input Name: ffffffff
-           Input Email: ffffffff
+     Expected result: Whole line of listed drinks removed.
+     Actual result: As expected.
+     Status: Pass
+
+    TC_02.5 Negative: Add email without @ simbol and only letters.
+        Pre-requisites:
+        1.Open the app https://coffee-cart.app/.
+        2.Add random item to the cart.
+        3.Go to the "Cart"
+
+        Steps:
+        1.Click "Total"
+        2.Input Name: ffffffff
+          Input Email: ffffffff
+        3.Observe the result
         Expected result: Error message "Please add valid email" Or Simmilar message apears.
         Actual result: Please add email address with @ simbol apears.
         Status: Pass
-    TC_02.7 Add email without @ simbol and only digits.
+    TC_02.6 Negative: Add email without @ simbol and only digits.
+        Pre-requisites:
+        1.Open the app https://coffee-cart.app/.
+        2.Add random item to the cart.
+        3.Go to the "Cart"
+        Step:
+        1.Click "Total"
+        2.Input Name: 111111
+        Input Email: 111111
+        3.Observe the result
 
         Expected result: Error message "Please add valid email" Or Simmilar message apears.
         Actual result: Please add email address with @ simbol apears.
         Status: Pass
-    TC_02.8 Negative: Invalid Name.Add email only with @ simbol and digits.
+    TC_02.7 Negative: Invalid email.Add email only with @ simbol.
+        Pre-requisites:
+        1.Open the app https://coffee-cart.app/.
+        2.Add random item to the cart.
+        3.Go to the "Cart"
+        Step:
+        1.Click "Total"
+        2.Input Name: zzzzz
+        Input Email: @@@@@@
+        3.Observe the result.
         Expected result: Error message "Please add valid email" Or Simmilar message apears.
-        Actual result: Please enter a part followed by '@'. 
-        Status: Fail
-    TC_02.9 Negative: Invalid Name. Add email only with @ simbol and letters.
-        Expected result: Error message "Please add valid email" Or Simmilar message apears.
-        Actual result: Please enter a part followed by '@'. 
-        Status: Fail
-    TC_02.10 Negative: Invalid Name.Add email only with  one @ simbol and letters before and after.
+        Actual result: 
+        Status: Pass
+   
+    TC_02.8 Negative: Invalid Email.Add email only with  one @ simbol and one letter before and after.
+
         Expected result: Error message "Please add valid email" Or Simmilar message apears.
         Actual result: Succesful purchase message appears.
         Status: Fail
-    TC_02.11 Negative: Invalid Name. add name only with a numbers:
+    TC_02.9 Negative: Invalid Name. add name only with a numbers:
         Pre:
         1.Open the app https://coffee-cart.app/.
         2.Add random item to the cart.
