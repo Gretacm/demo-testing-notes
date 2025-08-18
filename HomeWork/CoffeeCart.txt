@@ -1,0 +1,148 @@
+exploratory testing and:
+
+find the functionalities of the system.
+
+Identify the scenarios of the application:
+
+
+Test Scenarious:
+
+
+TS01 Menu
+    TC_01.1 Positive: Add one item to the cart
+        1. Open app https://coffee-cart.app/
+        2. Add a item to the cart
+        3. Observe the result;
+    Expected result: After clicking on the selected menu item, item should be added to the cart.
+    Actual result: Item appears in the cart.
+    Status: Pass
+
+
+    //
+    Add item to the cart? No
+    One finger click on an item:
+    Two finger click on an item:
+    //
+
+    TC_01.2 Add multiple items to the cart
+        1. Open app https://coffee-cart.app/
+        2. Add 50 items to the cart
+        3.Observe the result.
+    Expected result: 50 items should be added to the cart.
+    Actual result: Items appears in the cart.
+    Status: Pass
+
+    TC01.3 Coffee cup name language
+        1.Double click on a drink name
+    Expected result: Should have some drinks ingreadiant, calories or ect. Not change language to Chinese(unless this is design idea)
+    Actual result: Changes language from english to Chinese
+    Status: Fail
+
+
+
+TS02 It's your lucky day
+TS03 Cart
+    TC_03.1 Adding discounted mocha manually.
+
+        1.Open app https://coffee-cart.app/
+        2.Add two drink to the cart to get a dicounted mocha offer.
+        3.Agree to dicounted mocha.
+        4.Add 15 dicounted mocha's instead of full priced mocha's. 
+        5.Observe the result.
+    Expected result: App should not give you an option to add unlimited amount of discounted drink, error message should apear. Or not give plus button on it. 
+    Actual result: 15 discounted mochas apears in a cart.
+    Status: Fail
+
+
+
+TS04 GitHub
+TS05 Total
+TS06 Reduce the items
+TS07 Increase the items
+TS08 Payment   
+    TC_08.1 Positive: Add valid email address:
+    Pre:
+        1.Open the app https://coffee-cart.app/.
+        2.Add random item to the cart.
+
+        Steps: 
+        1.Hover over Total button.
+        2.Click on Total button.
+        3.Add a valid email adress with @simbol.
+    Expected result: Confirmation message about successfull purchase ir further steps apears.
+    Actual result: Green table with a confrmation message apears on a bottom of the screen.
+    Status: Pass
+
+TC_08.2 Negative: Add Name only with a numbers:
+     Pre:
+        1.Open the app https://coffee-cart.app/.
+        2.Add random item to the cart.
+        3.Hover over Total button.
+        4.Click on Total button.
+
+        Steps:
+        1.Add Numbers "12345" into the "Name" Input.
+        2.Add valid email adress with @simbol.
+
+        Expected result: Error message "Invalid Name" Or Simmilar scenario apears.
+        Actual result: Succesful purchase message appears.
+        Status: Fail
+        
+    TC_08.3 Check out with empty cart.
+        Pre:
+        1.Open the app https://coffee-cart.app/.
+        2.Hover over Total button.
+        3.Click on Total button.
+
+        1.Add valid details for the Input.
+        2.Press submit.
+        Expected result: Error message "Empty cart" Or Simmilar message apears.
+        Actual result: Succesful purchase message appears.
+        Status: Fail
+    TC_08.4 Add email without @ simbol and only letters.
+        1. Input Name: ffffffff
+           Input Email: ffffffff
+    Expected result: Error message "Please add valid email" Or Simmilar message apears.
+        Actual result: Please add email address with @ simbol apears.
+        Status: Pass
+    TC_08.5 Add email without @ simbol and only digits.
+    Expected result: Error message "Please add valid email" Or Simmilar message apears.
+        Actual result: Please add email address with @ simbol apears.
+        Status: Pass
+    TC_08.6 Add email only with @ simbol and digits.
+    Expected result: Error message "Please add valid email" Or Simmilar message apears.
+        Actual result: Please enter a part followed by '@'. 
+        Status: Pass
+    TC_08.7 Add email only with @ simbol and letters.
+    Expected result: Error message "Please add valid email" Or Simmilar message apears.
+        Actual result: Please enter a part followed by '@'. 
+        Status: Pass
+    TC_08.8 Add email only with  one @ simbol and letters before and after.
+    Expected result: Error message "Please add valid email" Or Simmilar message apears.
+        Actual result: Succesful purchase message appears.
+        Status: Fail
+
+
+
+TS09 It's your lucky day:
+    Every third coffee gives you "Extra cup of mocha"
+    TC_09.1 "Yes, of cource!"
+    TC_09.2 "Nah, I'll skip."
+TS10  Mobile view:
+    TC_10.1 Check the menu display on a small screen: 
+        1.Open the app https://coffee-cart.app/.
+        1. Open developer mode in Google Chrome.
+        2. Open Inspect
+        3. Choose the IphoneSE dimensions.
+        4.Observe that elements fits accordingly on a small dispaly.
+
+        
+
+    Expected result: Viev fits accordingly on a small screen.
+    Actual result: View does fit and adapt well on a smaller screen.
+    Status: Pass
+
+
+TS11/Suggestions:
+1. Adding multiple drinks at once (Not available)
+ 2.After certain time items desapears from the cart. 
