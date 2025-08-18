@@ -3,7 +3,7 @@
 Test Scenarious:
 
 TS01 Menu
-TS Discounted coffee
+
 
 
 TS01 Menu
@@ -23,23 +23,45 @@ TS01 Menu
         Actual result: Items appears in the cart.
         Status: Pass
 
-    TC_01.3 Coffee cup name language
+   TC_01.3 Change the drink name language
         1.Double click on a drink name
+        2.Observe the result
         Expected result: Should have some drinks ingreadiant, calories or ect. Not change language to Chinese(unless this is design idea)
         Actual result: Changes language from english to Chinese
         Status: Fail
 
-    TC_01.4 Change the drink name language
 
-    TC_01.5 Go to "Cart"
+    TC_01.4 Go to "Cart"
 
     TC_01.5 Go to "github"
 
     TC_01.6 Total hover button
 
+    TC_01.7 Total hover button increase item number by one
 
-TS02 Cart
-    TC_03.1  Positive: Add valid email address when on "Payment details":
+    TC_01.8 Total hover button reduce item number by one
+
+    TC_01.9 Total hover button Click to go to Checkout
+
+        Double click "Total" button
+
+    TC_01.10 Checkout with empty cart from menu page
+
+        Pre:
+        1.Open the app https://coffee-cart.app/.
+        2.Hover over Total button.
+        3.Click on Total button.
+
+        1.Add valid details for the Input.
+        2.Press submit.
+        3.Observe the result
+        Expected result: Error message "Empty cart" Or Simmilar message apears.
+        Actual result: Succesful purchase message appears.
+        Status: Fail
+
+
+TS02 Cart (Check the functionality of the "Cart" section)
+    TC_02.1  Positive: Add valid email address when on "Payment details":
             Pre:
             1.Open the app https://coffee-cart.app/.
             2.Add random item to the cart.
@@ -52,50 +74,38 @@ TS02 Cart
             Actual result: Green table with a confrmation message apears on a bottom of the screen.
             Status: Pass
 
-    TC_03.2 Add one coffee more to the list(+)
+    TC_02.2 Add one coffee more to the list(+)
 
-    TC_03.3 Remove one coffee from the list(-)
+    TC_02.3 Remove one coffee from the list(-)
 
-    TC_03.4 Remove whole list of coffees (X)
+    TC_02.4 Remove whole list of coffees (X)
 
-    TC_03.5 Check out with empty cart.
-
-
-                Pre:
-        1.Open the app https://coffee-cart.app/.
-        2.Hover over Total button.
-        3.Click on Total button.
-
-        1.Add valid details for the Input.
-        2.Press submit.
-        Expected result: Error message "Empty cart" Or Simmilar message apears.
-        Actual result: Succesful purchase message appears.
-        Status: Fail
-    TC_03.6 Add email without @ simbol and only letters.
+ 
+    TC_02.6 Add email without @ simbol and only letters.
 
         1. Input Name: ffffffff
            Input Email: ffffffff
         Expected result: Error message "Please add valid email" Or Simmilar message apears.
         Actual result: Please add email address with @ simbol apears.
         Status: Pass
-    TC_03.7 Add email without @ simbol and only digits.
+    TC_02.7 Add email without @ simbol and only digits.
 
         Expected result: Error message "Please add valid email" Or Simmilar message apears.
         Actual result: Please add email address with @ simbol apears.
         Status: Pass
-    TC_03.8 Negative: Invalid Name.Add email only with @ simbol and digits.
+    TC_02.8 Negative: Invalid Name.Add email only with @ simbol and digits.
         Expected result: Error message "Please add valid email" Or Simmilar message apears.
         Actual result: Please enter a part followed by '@'. 
         Status: Fail
-    TC_03.9 Negative: Invalid Name. Add email only with @ simbol and letters.
+    TC_02.9 Negative: Invalid Name. Add email only with @ simbol and letters.
         Expected result: Error message "Please add valid email" Or Simmilar message apears.
         Actual result: Please enter a part followed by '@'. 
         Status: Fail
-    TC_03.10 Negative: Invalid Name.Add email only with  one @ simbol and letters before and after.
+    TC_02.10 Negative: Invalid Name.Add email only with  one @ simbol and letters before and after.
         Expected result: Error message "Please add valid email" Or Simmilar message apears.
         Actual result: Succesful purchase message appears.
         Status: Fail
-    TC_03.11 Negative: Invalid Name. add name only with a numbers:
+    TC_02.11 Negative: Invalid Name. add name only with a numbers:
         Pre:
         1.Open the app https://coffee-cart.app/.
         2.Add random item to the cart.
@@ -110,23 +120,44 @@ TS02 Cart
         Actual result: Succesful purchase message appears.
         Status: Fail
 
-TS03 About (github)
-        TC_04.1
-TS05 Total
-        TC Reduce the items
-        TC Increase the items
- 
-TS10  Mobile view:
-    TC_10.1 Check the menu display on a small screen: 
-        1.Open the app https://coffee-cart.app/.
-        1. Open developer mode in Google Chrome.
-        2. Open Inspect
-        3. Choose the IphoneSE dimensions.
-        4.Observe that elements fits accordingly on a small dispaly.
+   
 
-    Expected result: Viev fits accordingly on a small screen.
-    Actual result: View does fit and adapt well on a smaller screen.
-    Status: Pass
+TS03 About (github)
+        TC_03.1 Go to "cart"
+        TC_03.2 Go to "menu"
+        TC_03.3 "Star our repository jecfish/coffee-cart." github link
+        
+            Link https://github.com/jecfish/coffee-cart
+
+        TC_03.4 Extra actions link "usual add to cart flows."
+
+            https://developer.chrome.com/docs/devtools/recorder/
+
+        TC_03.5 Slow down page with adds link "https://coffee-cart.app/?ad=1"
+
+                https://coffee-cart.app/?ad=1
+
+        TC_03.6 Simulate throw an error when adding coffee to cart.
+
+            https://coffee-cart.app/?breakable=1
+
+        TC_03.7 Record, replay and measure user flows with the Recorder panel link
+
+            https://developer.chrome.com/docs/devtools/recorder/
+
+        TC_03.8 Get actionable insights for your websites' performance with the Performance insights panel link
+
+            https://developer.chrome.com/docs/devtools/performance/overview
+
+TS04 UI/UX
+
+    TC_04.1 Discounted mocha add after every 3rd drink
+    TC_04.2 Negative: Mocha pop up display on a page
+           Pre-requisites:
+
+
+
+
 
 TS UI/UX:
     reklaminis baneris
@@ -140,11 +171,12 @@ TS UI/UX:
         Description: Every third coffee gives you "Extra cup of mocha"
         TC_02.1 Accept: "Yes, of cource!"
         TC_02.2 Decline: "Nah, I'll skip."
-      
+
+TS
 TS storage
     ? refreshinus puslpai duomenys neisaugomi? 
 
-TS11/Suggestions:
+Suggestions:
     1. Adding multiple drinks at once (Not available)
     2.After certain time items desapears from the cart. 
 
@@ -162,3 +194,15 @@ NEZINAU KUR PRIDET GERIAU.
         Expected result: App should not give you an option to add unlimited amount of discounted drink, error message should apear. Or not give plus button on it. 
         Actual result: 15 discounted mochas apears in a cart.
         Status: Fail
+
+TS10  Mobile view:
+    TC_10.1 Check the menu display on a small screen: 
+        1.Open the app https://coffee-cart.app/.
+        1. Open developer mode in Google Chrome.
+        2. Open Inspect
+        3. Choose the IphoneSE dimensions.
+        4.Observe that elements fits accordingly on a small dispaly.
+
+    Expected result: Viev fits accordingly on a small screen.
+    Actual result: View does fit and adapt well on a smaller screen.
+    Status: Pass
